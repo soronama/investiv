@@ -1,12 +1,11 @@
-"""investiv URL Configuration
-Including another URLconf
-"""
-from django.conf.urls import url, include
-from django.contrib import admin
-from investivgroup import urls
+from django.conf.urls import url, patterns, include
+from . import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^investivgroup/', include('investivgroup.urls')),
+    url(r'^accueil$', views.home.as_view()),
+    url(r'^apropos', TemplateView.as_view(template_name='investivgroup/apropos.html')),
+    url(r'^services$', views.services),
+    url(r'^projet$', views.projet_agricole),
+    url(r'^contact$', views.contact.as_view()),
 ]
-
