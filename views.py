@@ -1,14 +1,10 @@
-#-*- coding: utf-8 -*-
 from django.http import HttpResponse
 from datetime import datetime
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-'''def home(request):
-    return render(request, 'investivgroup/accueil.html', {})'''
-
 class home(TemplateView):
-   template_name = "investivgroup/accueil.html"  # chemin vers le template à afficher
+   template_name = "investivgroup/accueil.html"
 
 #def qui_sommes_nous(request):
     #return render(request, 'investivgroup/apropos.html',{})
