@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <link rel="stylesheet" href="/media/css/style.css" />
+   <title>{% block title %}Site INVESTIVGROUP sur l'agriculture{% endblock %}</title>
+</head>
+<body>
+<header>INVESTIV GROUP</header>
+    <nav>
+       {% block nav %}
+       <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/apropos/">Qui somme nous ?</a></li>
+            <li><a href="/services/">Servics</a></li>
+			<li><a href="/projet_agricole/">Mon projet</a></li>
+			<li><a href="/contact/">Contact</a></li>
+       </ul>
+       {% endblock %}
+   </nav>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+<footer>&copy; Les Drones INVESTIV </footer>
+</body>
+</html>
